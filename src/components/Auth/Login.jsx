@@ -2,6 +2,9 @@ import React from 'react'
 
 const Login = () => {
     const submitHandler = (e) => {
+
+        const [email, setEmail] = useState("");
+        const [password, setPassword] = useState("");
         e.preventDefault()
 
 
@@ -16,8 +19,8 @@ return (
                 submitHandler()
             }} className='login-form bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto'>
                 <div className='form-group mb-4'>
-                    <label htmlFor='email' className='form-label block text-sm font-medium text-gray-700'>Email address</label>
-                    <input type='email' className='form-control mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' id='email' />
+                    <label htmlFor='email' className='form-label block text-sm font-medium text-gray-700'   >Email address</label>
+                    <input value={e.target.value} onChange={(e)=> e.preventDefault} type='email' className='form-control mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' id='email' />
                 </div>
                 <div className='form-group mb-4'>
                     <label htmlFor='password' className='form-label block text-sm font-medium text-gray-700'>Password</label>
