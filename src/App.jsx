@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Login from './components/Auth/Login'
-import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
+import Login from "./components/Auth/Login";
+import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 
 function App() {
-
   return (
-    <>
-      <div className='flex items-center justify-center h-screen '>
+    <><div className="dark:bg-zinc-900 dark:text-white w-full h-screen m-0">
+
       {/* <Login /> */}
       <EmployeeDashboard />
-        
-      </div>
+    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
