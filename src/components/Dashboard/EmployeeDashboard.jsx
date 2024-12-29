@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../other/Header'
+import TaskListNumbers from '../other/TaskListNumbers'
 
 const EmployeeDashboard = () => {
   return (
@@ -7,6 +8,7 @@ const EmployeeDashboard = () => {
         <div className='w-full '>
 
             <Header />
+            <TaskListNumbers />
         </div>
 
     </>
