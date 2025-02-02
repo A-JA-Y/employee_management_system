@@ -1,64 +1,63 @@
 import React, { useState } from "react";
 
-const Login = () => {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const submitHandler = (e) => {
     e.preventDefault();
-
+    props.handleLogin(email, password);
+    setEmail("");
+    setPassword("");
     alert("Login form submitted");
   };
+
   return (
-    <>
-      <div className="container mx-auto p-4">
-        <h1 className="login-title text-3xl font-bold mb-4 text-center">
-          Login
-        </h1>
-        <form
-          onSubmit={() => {
-            submitHandler(e);
-          }}
-          className="login-form bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto"
-        >
-          <div className="form-group mb-4">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+        <h1 className="text-3xl font-bold mb-6 text-center">Login</h1>
+        <form onSubmit={submitHandler} className="space-y-4">
+          <div>
             <label
               htmlFor="email"
-              className="form-label block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700"
             >
               Email address
             </label>
-            <input required
+            <input
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
-              className="form-control mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="email"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
-          <div className="form-group mb-4">
+          <div>
             <label
               htmlFor="password"
-              className="form-label block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700"
             >
               Password
             </label>
-            <input required
+            <input
+              required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
-              className="form-control mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="password"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
           <button
             type="submit"
-            className="btn btn-primary w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="w-full py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             Login
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

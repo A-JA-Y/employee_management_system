@@ -1,98 +1,61 @@
 import React from "react";
 
+const tasks = [
+  {
+    id: 1,
+    priority: "High",
+    due: "20 Feb 2025",
+    title: "Make video",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada, odio eget tincidunt.",
+    bgColor: "bg-red-500",
+  },
+  {
+    id: 2,
+    priority: "Medium",
+    due: "22 Feb 2025",
+    title: "Design UI",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada, odio eget tincidunt.",
+    bgColor: "bg-green-500",
+  },
+  {
+    id: 3,
+    priority: "Low",
+    due: "25 Feb 2025",
+    title: "Update docs",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada, odio eget tincidunt.",
+    bgColor: "bg-yellow-500",
+  },
+  {
+    id: 4,
+    priority: "High",
+    due: "27 Feb 2025",
+    title: "Test features",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada, odio eget tincidunt.",
+    bgColor: "bg-blue-500",
+  },
+];
+
 const TaskList = () => {
   return (
-    <div
-      id="tasklist"
-      className="w-full p-2 mt-10 flex flex-wrap md:flex-nowrap gap-5 md:gap-8 overflow-x-auto md:h-[55%]"
-    >
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-gray-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-green-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-yellow-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-blue-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-gray-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-green-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-yellow-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
-      </div>
-      <div className="w-full sm:w-[300px] flex-shrink-0 bg-blue-500 rounded-xl mx-auto mb-5 text-white shadow-inner shadow-red-800 font-thin p-5">
-        <div className="flex justify-between items-center">
-          <h3 className="text-3xl drop-shadow-xl rounded-lg">High</h3>
-          <h4 className="text-2xl">20 feb 2025</h4>
-        </div>
-        <h2 className="font-semibold text-2xl mt-2">Make video</h2>
-        <p className="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada, odio eget tincidunt.
-        </p>
+    <div className="container mx-auto px-4 py-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {tasks.map((task) => (
+          <div
+            key={task.id}
+            className={`${task.bgColor} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-white p-5`}
+          >
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-semibold">{task.priority}</h3>
+              <h4 className="text-sm">{task.due}</h4>
+            </div>
+            <h2 className="text-2xl font-bold mb-2">{task.title}</h2>
+            <p className="text-base">{task.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
