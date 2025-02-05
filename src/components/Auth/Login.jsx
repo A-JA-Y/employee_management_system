@@ -13,9 +13,9 @@ const Login = (props) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-3xl font-bold mb-6 text-center">Login</h1>
+    <div className="min-h-screen flex items-center justify-center  p-4">
+      <div className="w-full max-w-md  shadow-lg rounded-lg bg-gray-200 p-6">
+        <h1 className="text-3xl font-bold mb-6 text-center text-zinc-900">Login</h1>
         <form onSubmit={submitHandler} className="space-y-4">
           <div>
             <label

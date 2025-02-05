@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="min-h-screen w-full dark:bg-zinc-900 dark:text-white p-4">
-      <div className="container mx-auto max-w-md flex flex-col items-center justify-center space-y-6">
+      <div>
         {!user && <Login handleLogin={handleLogin} />}
         {user === "user" && <EmployeeDashboard />}
         {user === "admin" && <AdminDashboard />}
