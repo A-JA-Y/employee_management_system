@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Login from "./components/Auth/Login";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 
 function App() {
   const [user, setUser] = useState(null);
+  // const data = useContext(AuthContext);
 
   const handleLogin = (email, password) => {
     if (email === "admin@me.com" && password === "admin") {
