@@ -7,19 +7,25 @@ import AuthContext from "./context/AuthProvider.jsx";
 function App() {
   const [user, setUser] = useState(null);
   const authData = useContext(AuthContext);
+  
 
   const handleLogin = (email, password) => {
-    const { employees, admin } = authData;
-    const employeeUser = employees.find(
-      (employee) => employee.email === email && employee.password === password
-    );
-    if (employeeUser) {
-      setUser("user");
-    } else if (admin.length > 0 && admin[0].email === email && admin[0].password === password) {
+    
+    if (authData.admin.email === email && authData.admin.password === password) {
       setUser("admin");
     } else {
-      alert("Invalid email or password");
+      const employee = authData.employees.find(
+        (employee) => employee.email === email && employee.password === password
+      );
+      if (employee) {
+        setUser("user");
+      } else {
+        alert("Invalid credentials");
+      }
     }
+
+   
+    
   };
 
   return (
